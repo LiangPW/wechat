@@ -1,0 +1,106 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+/*--------------*/
+.reBoxA{
+  width: 95%;
+  padding-left: 10%;
+  padding-top: 15px;
+}
+.showMonry{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.reBoxB{
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  padding: 15px 0;
+}
+.reBoxB-list{
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  width: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0 0 0 10%;
+}
+.reBoxB-list text,.reBoxA text{
+  display: block;
+  line-height: 30px;
+  font-size: 14px;
+  color: #666;
+}
+.showResulr{
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.White,.White text{
+  color: #fff;
+}
+
+
+
+
+.cunRrsulf{
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  line-height: 32px;
+}
+.cunRrsulf text{
+  width: 0%;
+  display: block;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+}
+
+
+/*----------*/
+.swiper-tab{  
+    width: 100%;  
+    text-align: center;  
+    line-height: 100rpx;
+    background: #fff;
+}  
+.swiper-tab-list{  
+    font-size: 34rpx;  
+    display: inline-block;  
+    width: 50%;  
+    color: #777777;  
+    border-bottom: 5rpx solid #eee;
+}  
+.on{ 
+  color: #0783dd;  
+  border-bottom: 5rpx solid #0783dd;
+  font-weight: bold;
+}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.swiper-box view{  
+    text-align: center;  
+}

@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="jsqType">
+    <image src="../../images/444.png" style="width:20px;height:20px;margin-right:5px;vertical-align:middle;"></image>银行存款计算器
+  </view>
+  <view class="swiper-tab">  
+      <view class="swiper-tab-list {{tab_change==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">活期存款</view>  
+      <view class="swiper-tab-list {{tab_change==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">定期存款</view>  
+  </view> 
+   <swiper style="width:100%;height:280px;" current="{{tab_change}}" duration="100" bindchange="bindChange">
+    <swiper-item>
+      <view class="ip_list">
+        <label class="lb_left">存款金额</label>
+        <input type="text" value="" bindinput="bindKeyInput" placeholder="0"/>
+        <label class="lb_right">元</label>
+      </view>
+      <view class="ip_list">
+        <label class="lb_left">存款期限</label>    
+        <input type="text" value="" bindinput="huoInput" placeholder="0"/>
+        <label class="lb_right">月</label>    
+      </view>
+      <view class="ip_list">
+        <label class="lb_left">存款利率</label>
+        <view class="lilv">0.35</view>
+        <label class="lb_right">%</label>
+      </view>
+      <view class="result-btn">
+        <button bindtap="huo">开始计算</button>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="ip_list">
+        <label class="lb_left">存款金额</label>
+        <input type="text" value="" bindinput="bindKeyInput" placeholder="0"/>
+        <label class="lb_right">元</label>
+      </view>
+      <view class="ip_list">
+        <label class="lb_left">存款期限</label>    
+        <picker bindchange="bindPickerChange" id="lendTime" value="index" range="{{lendTime}}">
+          <view class="lendTime">{{lendTime[index]}}</view>
+        </picker>
+      </view>
+      <view class="ip_list">
+        <label class="lb_left">存款利率</label>
+        <view class="lilv">{{lendTnterest}}</view>
+        <label class="lb_right">%</label>
+      </view>
+      <view class="result-btn">
+        <button bindtap="ding">开始计算</button>
+      </view>
+    </swiper-item>
+   </swiper>
+  
+
+  <view class="cunRrsulf">
+    <text style="text-align:right">利息：</text>
+    <text>{{all_lixi}} 元</text>
+  </view>
+  <view class="cunRrsulf">
+    <text style="text-align:right">本息合计：</text>
+    <text>{{sum}} 元</text>
+  </view>
+
+</view>

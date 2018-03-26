@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="swiper-tab">  
+      <view class="swiper-tab-list {{tab_change==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">等额本息</view>  
+      <view class="swiper-tab-list {{tab_change==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">等额本金</view>  
+  </view> 
+  <swiper style="width:100%;height:185px;background:#1eacea;"current="{{tab_change}}" duration="100" bindchange="bindChange">
+    <swiper-item>
+      <view class="reBoxA White">
+        <text>每月还款（元）</text>
+        <view class="showMonry">{{count_debx}}</view>
+      </view>
+      <view class="reBoxB White">
+        <view class="reBoxB-list" style="border-right:1px solid #0098db;">
+          <text>利息总额（万元）</text>
+          <view class="showResulr">{{lixi_debx}}</view>
+        </view>
+        <view class="reBoxB-list">
+          <text>还款总额（万元）</text>
+          <view class="showResulr">{{all_debx}}</view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="reBoxA White">
+        <text>首月还款</text>
+        <view class="showMonry">{{count_debjin}}<text style="display: inline;margin-left:10px;font-weight:normal;">每月递减{{jian_debjin}}元</text> </view>
+      </view>
+      <view class="reBoxB White">
+        <view class="reBoxB-list" style="border-right:1px solid #eee;">
+          <text>利息总额（万元）</text>
+          <view class="showResulr">{{lixi_debjin}}</view>
+        </view>
+        <view class="reBoxB-list">
+          <text>还款总额（万元）</text>
+          <view class="showResulr">{{all_debjin}}</view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="reBoxB">
+    <view class="reBoxB-list" style="border-right:1px solid #ddd;">
+      <text>贷款金额（万元）</text>
+      <view class="showResulr">{{lendMoney}}</view>
+    </view>
+    <view class="reBoxB-list">
+      <text>贷款期限</text>
+      <view class="showResulr">{{lendTime}} 年</view>
+    </view>
+  </view>
+</view>

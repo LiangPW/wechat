@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="jsqType">
+    <image src="../../images/333.png" style="width:20px;height:20px;margin-right:5px;vertical-align:middle;"></image>网贷计算器
+  </view>
+  <view class="ip_list">
+    <label class="lb_left">投资金额</label>
+    <input type="text" value="" bindinput="bindKeyInput" placeholder="0"/>
+    <label class="lb_right">元</label>
+  </view>
+  <view class="ip_list">
+    <label class="lb_left">投资时长</label>    
+    <input type="text" value="" bindinput="timeKeyInput" placeholder="0"/>
+    <label class="lb_right">月</label>    
+  </view>
+  <view class="ip_list">
+    <label class="lb_left">年化利率</label>
+    <input type="text" value="" bindinput="lilvKeyInput" placeholder="0"/>
+    <label class="lb_right">%</label>
+  </view>
+  <view class="result-btn">
+    <button bindtap="p2pResult">开始计算</button>
+  </view>
+  <view class="cunRrsulf">
+    <text style="text-align:right;">总收益：</text>
+    <text>{{p2pSum}} 元</text>
+  </view>
+</view>

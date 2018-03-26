@@ -1,0 +1,86 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.ip_list{
+  width: 90%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  display:-moz-box; /* Firefox */
+  display:-webkit-box; /* Safari and Chrome */
+  display:box;
+  line-height: 26px;
+  color: #666;
+}
+
+.ip_list input,.lilv,.lendTime{
+  padding: 0 10px 0 0;
+  text-align: right;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  color: #000;
+}
+
+#lendTime{
+  text-align: right;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+}
+
+.result-btn{
+  width: 90%;
+  margin: 20px auto;
+}
+.result-btn button{
+  background: #1eacea;
+  color:#fff;
+}
+
+
+
+/*----------*/
+.swiper-tab{  
+    width: 100%;  
+    text-align: center;  
+    line-height: 100rpx;
+    background: #fff;
+}  
+.swiper-tab-list{  
+    font-size: 34rpx;  
+    display: inline-block;  
+    width: 50%;  
+    color: #777777;  
+    border-bottom: 5rpx solid #eee;
+}  
+.on{ 
+  color: #0783dd;  
+  border-bottom: 5rpx solid #0783dd;
+  font-weight: bold;
+}  
+  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.swiper-box view{  
+    text-align: center;  
+}

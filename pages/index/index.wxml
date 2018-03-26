@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="jsqType">
+    <image src="../../images/111.png" style="width:20px;height:20px;margin-right:5px;vertical-align:middle;"></image>房贷计算器
+  </view>
+  <view class="swiper-tab">  
+      <view class="swiper-tab-list {{tab_change==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">商业贷款</view>  
+      <view class="swiper-tab-list {{tab_change==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">公积金贷款</view>  
+      <!--<view class="swiper-tab-list {{tab_change==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">组合贷款</view>  -->
+  </view> 
+  <swiper style="height:{{winHeight-31}}px;width:{{winWidth}}px;" current="{{tab_change}}" duration="100" bindchange="bindChange">
+    <swiper-item class="drbx">
+      <view class="ip_list">
+        <label class="lb_left">贷款金额</label>
+        <input type="text" value="" bindinput="bindKeyInput" placeholder="0"/>
+        <label class="lb_right">万</label>
+      </view>
+      <view class="ip_list">
+        <label class="lb_left">贷款期限</label>    
+        <picker bindchange="bindPickerChange" id="lendTime" value="index" range="{{lendTime}}">
+          <!--<input value="{{lendTime[index]}}" type="text"/>-->
+          <view class="lendTime">{{lendTime[index]}}</view>
+        </picker>
+        <label class="lb_right">年</label>    
+      </view>
+      <view class="ip_list">
+        <label class="lb_left">贷款利率</label>
+        <view class="lilv">{{lendTnterest}}</view>
+        <label class="lb_right">%</label>
+      </view>
+      <view class="result-btn">
+        <button bindtap="lendResultSYD">开始计算</button>
+      </view>
+    </swiper-item>
+    <swiper-item class="drbjin">
+      <view class="ip_list">
+        <label class="lb_left">贷款金额</label>
+        <input type="text" value="" bindinput="bindKeyInput" placeholder="0"/>
+        <label class="lb_right">万</label>
+      </view>
+      <view class="ip_list">
+        <label class="lb_left">贷款期限</label>    
+        <picker bindchange="bindPickerChangeGJJ" id="lendTime" value="index" range="{{lendTime}}">
+          <!--<input value="{{lendTimeGJJ[index]}}" type="text"/>-->
+          <view class="lendTime">{{lendTimeGJJ[index]}}</view>
+        </picker>
+        <label class="lb_right">年</label>    
+      </view>
+      <view class="ip_list">
+        <label class="lb_left">贷款利率</label>
+        <view class="lilv">{{lendTnterest}}</view>
+        <label class="lb_right">%</label>
+      </view>
+      <view class="result-btn">
+        <button bindtap="lendResultGJJ">开始计算</button>
+      </view>
+    </swiper-item>
+    <!--<swiper-item style="background:#d22;"></swiper-item>-->
+  </swiper>
+</view>

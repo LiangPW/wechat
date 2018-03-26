@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/result/result",
+    "pages/car/car",
+    "pages/p2p/p2p",
+    "pages/bank/bank",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/11.png",
+        "iconPath": "images/1.png",
+        "pagePath": "pages/index/index",
+        "text": "房贷"
+      },
+      {
+        "selectedIconPath": "images/22.png",
+        "iconPath": "images/2.png",
+        "pagePath": "pages/car/car",
+        "text": "车贷"
+      },
+      {
+        "selectedIconPath": "images/33.png",
+        "iconPath": "images/3.png",
+        "pagePath": "pages/p2p/p2p",
+        "text": "网贷"
+      },
+      {
+        "selectedIconPath": "images/44.png",
+        "iconPath": "images/4.png",
+        "pagePath": "pages/bank/bank",
+        "text": "存款"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}
